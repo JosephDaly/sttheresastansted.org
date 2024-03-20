@@ -1,6 +1,6 @@
 # St Theresa of Lisieux Church, Stansted
 ## Next Mass:
-<div id="nextMass" style="font-size: x-large"></div>
+<div id="nextMass" style="font-size: xxx-large; text-align: center"></div>
 
 <script>
 let now = Date.now();
@@ -10,8 +10,25 @@ let massTimes = {{ site.data.masstimes | jsonify }}.map(x => { x["timestamp"] = 
     .sort((a, b) => a.timestamp - b.timestamp);
 
 let nextMass = massTimes.find(x => x.Type === 'Mass');
+
+let titleParagraph = document.createElement("p");
+titleParagraph.appendChild(document.createTextNode(nextMass.Title));
+
+
+let date = new Date(nextMass.timestamp);
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
+const dateTimeFormat = new Intl.DateTimeFormat('en-GB', options);
+let dateParagraph = document.createElement("p");
+dateParagraph.appendChild(document.createTextNode(dateTimeFormat.format(date)));
+
 document.getElementById("nextMass").replaceChildren(
-    document.createTextNode(nextMass.Date + ' ' + nextMass.Title)
+titleParagraph,
+dateParagraph
 );
 
 </script>
