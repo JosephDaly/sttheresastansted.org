@@ -7,11 +7,20 @@
 
 ## Where to find us
 
--<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=0.19879996776580813%2C51.90977187162156%2C0.2017772197723389%2C51.91184511171202&amp;layer=mapnik&amp;marker=51.91080850363098%2C0.2002885937690735" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=51.91081&amp;mlon=0.20029#map=19/51.91081/0.20029">View Larger Map</a></small>
+<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=0.19879996776580813%2C51.90977187162156%2C0.2017772197723389%2C51.91184511171202&amp;layer=mapnik&amp;marker=51.91080850363098%2C0.2002885937690735" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=51.91081&amp;mlon=0.20029#map=19/51.91081/0.20029">View Larger Map</a></small>
+
+<div id="timemachine" style="display: none;">
+## Control time
+
+<p id="currentTime"></p>
+
+</div>
 
 <script lang="js">
 // What time is it now?
 let now = Date.now();
+
+let showValue = 'inline-block';
 
 // Get all upcoming events, excluding past events
 let massTimes = {{ site.data.masstimes | jsonify }}.map(x => { x["timestamp"] = Date.parse(x.Date); return x; })
@@ -61,4 +70,10 @@ let nextFive = massTimes.filter(x => x.timestamp < sevenDaysFromNow).map(x => {
     return row;
 });
 nextFive.forEach(x => table.appendChild(x));
+document.getElementById('currentTime').replaceChildren(document.createTextNode(dateTimeFormat.format(now)));
+
+// Time machine
+if (window.location.hash) {
+  document.getElementById('timemachine').style.display = showValue;
+}
 </script>
