@@ -3,7 +3,8 @@
 
 <script>
 let now = Date.now();
-let massTimes = {{ site.data.masstimes | jsonify }}.map(x => { x[timestamp] = Date.parse(x.Date); return x; })
+
+let massTimes = {{ site.data.masstimes | jsonify }}.map(x => { x["timestamp"] = Date.parse(x.Date); return x; })
     .filter(x => x.timestamp >= now)
     .sort((a, b) => a.timestamp - b.timestamp);
 
