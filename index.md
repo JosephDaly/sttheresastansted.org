@@ -45,9 +45,11 @@ titleParagraph,
 dateParagraph
 );
 
-// Add next 5 upcoming of all types to table
+// Add next 7 days upcoming of all types to table
+let sevenDays = 7 * 24 * 60 * 60 * 1000;
+let sevenDaysFromNow = now + sevenDays;
 let table = document.getElementById("upcomingTable");
-let nextFive = massTimes.slice(0, 5).map(x => {
+let nextFive = massTimes.filter(x => x.timestamp < sevenDaysFromNow).map(x => {
     let row = document.createElement("tr");
     let dateCell = document.createElement("td");
     dateCell.style.whiteSpace = 'nowrap';
