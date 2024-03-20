@@ -1,5 +1,6 @@
 # St Theresa of Lisieux Church, Stansted
 ## Next Mass:
+<div id="nextMass" style="font-size: x-large"></div>
 
 <script>
 let now = Date.now();
@@ -15,7 +16,6 @@ document.getElementById("nextMass").replaceChildren(
 
 </script>
 
-<div id="nextMass" style="font-size: x-large"></div>
 
 <table>
 {% for mass in site.data.masstimes %}
