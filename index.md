@@ -41,7 +41,7 @@ let table = document.getElementById("upcoming");
 let nextFive = massTimes.slice(0, 5).map(x => {
     let row = document.createElement("tr");
     let dateCell = document.createElement("td");
-    dateCell.appendChild(document.createTextNode(dateTimeFormat.format(new Date(x.timestamp));
+    dateCell.appendChild(document.createTextNode(dateTimeFormat.format(new Date(x.timestamp))));
     let titleCell = document.createElement("td");
     titleCell.appendChild(document.createTextNode(x.Title));
     row.appendChild(dateCell);
