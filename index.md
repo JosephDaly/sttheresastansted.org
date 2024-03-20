@@ -52,6 +52,7 @@ let table = document.getElementById("upcomingTable");
 let nextFive = massTimes.slice(0, 5).map(x => {
     let row = document.createElement("tr");
     let dateCell = document.createElement("td");
+    dateCell.style.whiteSpace = 'nowrap';
     dateCell.appendChild(document.createTextNode(dateTimeFormat.format(new Date(x.timestamp))));
     let titleCell = document.createElement("td");
     titleCell.appendChild(document.createTextNode(x.Title));
