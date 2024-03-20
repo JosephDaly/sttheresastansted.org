@@ -1,16 +1,20 @@
 # St Theresa of Lisieux Church, Stansted
 ## Next Mass:
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
 <script>
+let now = Date.now();
+let massTimes = {{ site.data.masstimes | jsonify }}.map(x => { x[timestamp] = Date.parse(x.Date); return x; })
+    .filter(x => x.timestamp >= now)
+    .sort((a, b) => a.timestamp - b.timestamp);
 
-let massTimes = {{ site.data.masstimes | jsonify }}
-let now = Date.now()
-
-
+let nextMass = massTimes.find(x => x.Type === 'Mass');
+document.getElementById("nextMass").replaceChildren(
+    document.createTextNode(nextMass.Date + ' ' + nextMass.Title)
+);
 
 </script>
+
+<div id="nextMass" style="font-size: x-large"></div>
 
 <table>
 {% for mass in site.data.masstimes %}
