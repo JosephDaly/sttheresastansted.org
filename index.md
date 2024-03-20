@@ -3,7 +3,7 @@
 <div id="nextMass" style="font-size: xxx-large; text-align: center"></div>
 
 ## Upcoming
-<table id="upcoming"></table>
+<table id="upcomingTable"></table>
 
 ## Where to find us
 
@@ -46,7 +46,7 @@ dateParagraph
 );
 
 // Add next 5 upcoming of all types to table
-let table = document.getElementById("upcoming");
+let table = document.getElementById("upcomingTable");
 let nextFive = massTimes.slice(0, 5).map(x => {
     let row = document.createElement("tr");
     let dateCell = document.createElement("td");
