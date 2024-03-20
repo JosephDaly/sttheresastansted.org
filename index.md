@@ -34,6 +34,8 @@ const options = {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit'
 };
 const dateTimeFormat = new Intl.DateTimeFormat('en-GB', options);
 let dateParagraph = document.createElement("p");
