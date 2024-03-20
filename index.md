@@ -46,7 +46,7 @@ let nextFive = massTimes.slice(0, 5).map(x => {
     titleCell.appendChild(document.createTextNode(x.Title));
     row.appendChild(dateCell);
     row.appendChild(titleCell);
-};
+});
 table.replaceChildren(nextFive);
 </script>
 
