@@ -7,10 +7,7 @@
 
 ## Where to find us
 
-<div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" src="https://www.openstreetmap.org/export/embed.html?bbox=0.19879996776580813%2C51.90977187162156%2C0.2017772197723389%2C51.91184511171202&amp;layer=mapnik&amp;marker=51.91080850363098%2C0.2002885937690735" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=51.91081&amp;mlon=0.20029#map=19/51.91081/0.20029">View Larger Map</a></small>
-</div>
-
+-<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=0.19879996776580813%2C51.90977187162156%2C0.2017772197723389%2C51.91184511171202&amp;layer=mapnik&amp;marker=51.91080850363098%2C0.2002885937690735" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=51.91081&amp;mlon=0.20029#map=19/51.91081/0.20029">View Larger Map</a></small>
 
 <script lang="js">
 // What time is it now?
