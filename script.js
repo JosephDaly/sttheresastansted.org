@@ -1,6 +1,4 @@
-var data = [];
-
-function update(now)
+function update(data, now)
 {
   // Get all upcoming events, excluding past events
   let massTimes = data.map(x => { x["timestamp"] = Date.parse(x.Date); return x; })
@@ -66,7 +64,7 @@ function update(now)
     timeSlider.value = now;
 
     timeSlider.onchange = event => {
-      update(event.value);
+      update(data, event.value);
     };
   }
 }

@@ -20,7 +20,7 @@ title: Demo Website
 </div>
 
 <script src="script.js" />
-<script>
-data = {{ site.data.masstimes | jsonify }};
-update(Date.now());
+<script lang="js">
+let upcomingEventData = {{ site.data.masstimes | jsonify }};
+update(upcomingEventData, Date.now());
 </script>
