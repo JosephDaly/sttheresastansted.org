@@ -1,5 +1,5 @@
 ---
-title: St Theresa of Lisieux Church, Stansted
+title: Demo Website
 ---
 
 ## Next Mass
