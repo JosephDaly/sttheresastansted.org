@@ -21,6 +21,6 @@ title: Demo Website
 
 <script src="script.js" />
 <script>
-let data = {{ site.data.masstimes | jsonify }};
+data = {{ site.data.masstimes | jsonify }};
 update(Date.now());
 </script>

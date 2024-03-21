@@ -1,3 +1,5 @@
+var data = [];
+
 function update(now)
 {
   // Get all upcoming events, excluding past events
