@@ -16,7 +16,11 @@ title: Demo Website
 <h2>Control time</h2>
 
 <p id="currentTime"></p>
-  <input type="range" min="1" max="100" value="50" class="slider" id="timeSlider">
+  <input type="range" min="1" max="100" value="50" id="timeSlider">
 </div>
 
 <script src="script.js" />
+<script>
+let data = {{ site.data.masstimes | jsonify }};
+update(Date.now());
+</script>
