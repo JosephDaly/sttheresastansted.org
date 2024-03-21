@@ -53,5 +53,18 @@ function update(now)
   // Time machine
   if (window.location.hash) {
     document.getElementById('timemachine').style.display = 'inline-block';
+    let timeSlider = document.getElementById('timeSlider');
+
+    let numbers = data.map(x => Date.parse(x.Date));
+    let min = Math.min.apply(null, numbers);
+    let max = Math.max.apply(null, numbers);
+
+    timeSlider.min = min;
+    timeSlider.max = max;
+    timeSlider.value = now;
+
+    timeSlider.onchange = event => {
+      update(event.value);
+    };
   }
 }
