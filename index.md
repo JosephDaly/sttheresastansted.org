@@ -19,7 +19,7 @@ title: Demo Website
   <input type="range" min="1" max="100" value="50" id="timeSlider">
 </div>
 
-<script src="script.js" />
+<script src="script.js"></script>
 <script lang="js">
 let upcomingEventData = {{ site.data.masstimes | jsonify }};
 update(upcomingEventData, Date.now());
