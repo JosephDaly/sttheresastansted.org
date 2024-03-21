@@ -1,4 +1,7 @@
-# St Theresa of Lisieux Church, Stansted
+---
+title: St Theresa of Lisieux Church, Stansted
+---
+
 ## Next Mass
 <div id="nextMass" style="font-size: xxx-large; text-align: center"></div>
 
