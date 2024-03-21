@@ -80,3 +80,4 @@ if (window.location.hash) {
   document.getElementById('timemachine').style.display = showValue;
 }
 </script>
+<script src="script.js" />
