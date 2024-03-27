@@ -64,7 +64,7 @@ function update(data, now)
     timeSlider.value = now;
 
     timeSlider.onchange = event => {
-      update(data, event.value);
+      update(data, parseInt(event.target.value));
     };
   }
 }
