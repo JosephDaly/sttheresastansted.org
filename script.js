@@ -2,7 +2,7 @@ function update(data, now)
 {
   // Get all upcoming events, excluding past events
   let massTimes = data.map(x => { x["timestamp"] = Date.parse(x.Date); return x; })
-      // .filter(x => x.timestamp >= now)
+      .filter(x => x.timestamp >= now)
       .sort((a, b) => a.timestamp - b.timestamp);
 
   // Find first event of type Mass
