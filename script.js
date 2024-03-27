@@ -47,7 +47,7 @@ function update(data, now)
       row.appendChild(titleCell);
       return row;
   });
-  nextFive.forEach(x => table.appendChild(x));
+  table.replaceChildren(...nextFive);
   document.getElementById('currentTime').replaceChildren(document.createTextNode(dateTimeFormat.format(now)));
 
   // Time machine
